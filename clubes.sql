@@ -43,6 +43,15 @@ UPDATE clubes
 SET Treinador = 'Vagner Mancini'
 WHERE Nome = 'Atlético Mineiro';
 
+/* Foi solicitado a adição de um clube sem Títulos Brasileiros */
 
+INSERT INTO clubes(id, Nome,Títulos, Treinador)
+VALUES(7, 'Brasil de Pelotas',0, 'Bolivar');
+
+/* Contudo, constatou-se posteriormente, que apenas clubes com títulos nacionais
+poderiam constar no banco de dados, foi solicitada a exclusão do Brasil de Pelotas */
+
+DELETE FROM clubes 
+WHERE Nome = 'Brasil de Pelotas';
 
 SELECT * FROM clubes

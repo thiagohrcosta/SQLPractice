@@ -23,12 +23,26 @@ VALUES(4, 'Flamengo', 6, 'Jorge Jesus');
 INSERT INTO clubes (id, Nome, Títulos, Treinador)
 VALUES(5, 'São Paulo', 6, '')
 
+INSERT INTO clubes(id, Nome, Títulos, Treinador)
+VALUES(6, 'Atlético Mineiro', 1,'Rodrigo Santana');
+
+
 /* Conforme é possível notar acima, o São Paulo não possuia um treinador cadastrado,
 desta forma, realizou-se um UPDATE dos dados inserindo o referido nome do treinador */
 
 UPDATE clubes
 SET Treinador = 'Fernando Diniz'
 WHERE Nome = 'São Paulo';
+
+
+/* Conforme anunciado, o Treinador do Atlético Mineiro, Rodrigo Santana foi demitido
+após a derrota para o Grêmio em meados de outubro de 2019, para o seu lugar foi 
+contratado Vagner Mancini */
+
+UPDATE clubes
+SET Treinador = 'Vagner Mancini'
+WHERE Nome = 'Atlético Mineiro';
+
 
 
 SELECT * FROM clubes
